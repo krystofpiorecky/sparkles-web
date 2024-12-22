@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Reem+Kufi:wght@700&display=swap');
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: black;
+  background: white;
+}
+
+.revealable {
+  opacity: 0;
+}
+  .revealable.revealed {
+    animation: reveal ease-in 0.5s;
+    opacity: 1;
+    transform: none;
+  }
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
