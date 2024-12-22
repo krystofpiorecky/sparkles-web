@@ -76,7 +76,7 @@ const SceneContent = ({ scene, animations }: SceneContentProps) => {
       waveActionRef.current = mixer.clipAction(waveAction);
     }
 
-    waveActionRef.current?.reset().play();
+    // waveActionRef.current?.reset().play();
   }, [scene]);
 
   useFrame((_, delta) => {

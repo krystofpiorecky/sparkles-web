@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Reem+Kufi:wght@700&display=swap');
 
+a {
+  text-decoration: none;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -14,6 +18,15 @@ body {
 body {
   color: black;
   background: white;
+}
+
+section.content {
+  background-color: #170f00;
+  padding: 100px 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .revealable {
@@ -34,4 +47,21 @@ body {
     opacity: 1;
     transform: translate(0, 0);
   }
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+section > .container {
+  width: 1200px;
+  max-width: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+section > .h2 {
+  width: 1200px;
+  max-width: calc(100% - 80px);
 }

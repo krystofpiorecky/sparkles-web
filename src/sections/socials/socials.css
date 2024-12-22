@@ -1,0 +1,46 @@
+.socials > .container main{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.socialsCard {
+  --_color: var(--color, 255, 0, 255);
+  background-color: rgba(var(--_color), 0.1);
+  border-radius: 33px;
+  padding: 33px;
+  color: rgb(var(--_color));
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.socialsCard .spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialsCard .account {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+}
+
+.socialsCard img {
+  height: 30px;
+  width: 30px;
+  pointer-events: none;
+  border-radius: 100%;
+}
+
+.socialsCard svg {
+  height: 16px;
+  width: 16px;
+}
