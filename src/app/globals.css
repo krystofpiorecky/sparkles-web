@@ -48,6 +48,15 @@ section.content::before {
   background-image: radial-gradient( circle at center top, #fcd800, #f79f00 );
 }
 
+[data-samsungbrowser=true] section.content::before {
+  background-image: radial-gradient(
+    circle at center top,
+    rgb(3, 39, 255),
+    rgb(3, 184, 255)
+  );
+  filter: invert(1) saturate(2);
+}
+
 .revealable {
   opacity: 0;
 }

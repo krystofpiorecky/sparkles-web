@@ -7,14 +7,34 @@
   box-sizing: border-box;
   min-height: calc(550px + 180px);
   max-height: 1200px;
-  background-image: radial-gradient(
+  /* background-image: radial-gradient(
     circle at center bottom,
     #fcd800,
     #f79f00
-  );
+  ); */
   position: relative;
   pointer-events: none;
 }
+  .hero::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: radial-gradient(
+      circle at center bottom,
+      #fcd800,
+      #f79f00
+    );
+    pointer-events: none;
+  }
+  [data-samsungbrowser=true] .hero::before {
+    background-image: radial-gradient(
+      circle at center bottom,
+      rgb(3, 39, 255),
+      rgb(3, 184, 255)
+    );
+    filter: invert(1) saturate(2);
+  }
   .hero > img.text {
     position: absolute;
     max-height: 100%;
