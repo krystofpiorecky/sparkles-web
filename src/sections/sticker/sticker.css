@@ -18,12 +18,12 @@
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-/* 1cfcff */
 .sticker .image {
   min-width: 350px;
-  height: 350px;
+  height: auto;
   background-color: rgba(26, 251, 255, 0.1);
   border-radius: 30px;
+  aspect-ratio: 1;
 }
 
 .sticker .image img {
@@ -53,6 +53,7 @@
   border-radius: 100px;
   font-weight: bold;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .sticker .info .steam svg {
   height: 16px;
@@ -95,5 +96,31 @@
 {
   .sticker .info h3 {
     font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px)
+{
+  .sticker > .container main {
+    flex-direction: column;
+  }
+
+  .sticker .image {
+    min-width: auto;
+  }
+
+  .sticker .info {
+    padding: 0 8px;
+  }
+}
+
+@media only screen and (max-width: 500px)
+{
+  .sticker > .container main {
+    gap: 20px;
+    margin: 0;
+  }
+  .sticker > .container main::after {
+    display: none;
   }
 }
