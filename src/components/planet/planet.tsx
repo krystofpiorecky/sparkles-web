@@ -86,8 +86,7 @@ const SceneContent = ({ scene, animations }: SceneContentProps) => {
   });
 
   return <>
-    {/* <ambientLight intensity={3} />
-    <Environment files="/env-dark.hdr" /> */}
+    <ambientLight intensity={1} />
     <Environment files="/env.hdr" />
     {scene && <primitive object={scene} position={[0, 0, 0]} />}
   </>
