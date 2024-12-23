@@ -86,18 +86,9 @@ const SceneContent = ({ scene, animations }: SceneContentProps) => {
   });
 
   return <>
-    {/* <ambientLight intensity={1} /> */}
-    {/* <rectAreaLight position={[0, -28, 24]} rotation={[-128, 0, 0]} width={200} height={200} power={1000000} color={"white"} /> */}
-    {/* <rectAreaLight position={[-4, -6.6, 6.8]} rotation={[34, -25.5, -16.3]} width={100} height={100} power={250000} color={"white"} /> */}
-    {/* <Sphere position={[-4, 6.8, -6.6]} material={mat}/> */}
+    {/* <ambientLight intensity={3} />
+    <Environment files="/env-dark.hdr" /> */}
     <Environment files="/env.hdr" />
     {scene && <primitive object={scene} position={[0, 0, 0]} />}
-    {/* <OrbitControls 
-      enablePan={false} 
-      enableZoom={false}
-      minPolarAngle={ANGLE}
-      maxPolarAngle={ANGLE}
-      autoRotate={true}
-    /> */}
   </>
 }
