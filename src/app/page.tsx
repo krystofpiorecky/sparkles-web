@@ -9,7 +9,7 @@ import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 
 export default function Home() {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  const userAgent = navigator.userAgent;
   const isSamsungBrowser = /SamsungBrowser/i.test(userAgent);
   return <SimpleBar style={{ maxHeight: '100vh', overflowX: 'hidden', color: "#fff" }}>
     <main className={styles.div} data-samsungbrowser={isSamsungBrowser}>
