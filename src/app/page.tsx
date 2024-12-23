@@ -1,5 +1,6 @@
 import styles from './page.module.css'
 import Hero from '@/sections/hero/hero'
+import Projects from '@/sections/projects/projects'
 import Socials from '@/sections/socials/socials'
 import Sticker from '@/sections/sticker/sticker'
 
@@ -10,6 +11,7 @@ export default function Home() {
       <section className="content">
         <Socials />
         <Sticker />
+        <Projects />
       </section>
     </main>
   )

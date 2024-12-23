@@ -1,5 +1,6 @@
 .sticker > .container main {
   margin-top: 20px;
+  margin-bottom: 20px;
   position: relative;
   display: flex;
   gap: 30px;

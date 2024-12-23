@@ -1,0 +1,68 @@
+.projects > .container > main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.projects .projectCard {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.projects .projectCard .image {
+  min-width: 350px;
+  width: 350px;
+  height: 350px;
+  border-radius: 40px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+  overflow: hidden;
+  position: relative;
+}
+
+.projects .projectCard .image img {
+  pointer-events: none;
+  position: absolute;
+  height: calc(100% - 40px);
+  left: 20px;
+  top: 20px;
+  border-radius: 20px;
+}
+
+.projects .projectCard .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+}
+
+.projects .projectCard .info h3 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.projects .projectCard .info > span {
+  color: #1cfcff;
+  font-weight: bold;
+}
+
+.projects .projectCard .info > p {
+  max-width: 370px;
+}
+
+.projects .projectCard .button {
+  height: 52px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 100px;
+  gap: 20px;
+  margin-top: auto;
+  font-weight: bold;
+}
+
+.projects .projectCard .button svg {
+  height: 16px;
+  width: 16px;
+}
