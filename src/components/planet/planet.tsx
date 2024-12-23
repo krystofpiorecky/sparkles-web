@@ -38,9 +38,18 @@ export default function Planet() {
   
   const ref = useRef<HTMLDivElement>(null);
   const { scene, animations } = useGetScene('/ninja.glb');
+  const [ visible, setVisible ] = useState(false);
+
+  useEffect(() => {
+    if (!scene) return;
+    setTimeout(() => {
+      setVisible(true);
+    }, 200);
+  }, [scene])
 
   return (
-    <div className="planet" ref={ref}>
+    <div className="planet" ref={ref} data-visible={visible}>
+      <img src="/prerendered.webp" />
       <Canvas
         camera={{
           position: [0, 5, 20],
@@ -50,7 +59,7 @@ export default function Planet() {
         gl={{
           preserveDrawingBuffer: true
         }}>
-        <SceneContent scene={scene} animations={animations} />
+        <SceneContent scene={scene} animations={animations} visible={visible} />
       </Canvas>
     </div>
   )
@@ -58,10 +67,11 @@ export default function Planet() {
 
 type SceneContentProps = {
   scene?: THREE.Group<THREE.Object3DEventMap>,
-  animations?: THREE.AnimationClip[]
+  animations?: THREE.AnimationClip[],
+  visible: boolean
 };
 
-const SceneContent = ({ scene, animations }: SceneContentProps) => {
+const SceneContent = ({ scene, animations, visible }: SceneContentProps) => {
   const mixerRef = useRef<THREE.AnimationMixer | null>(null);
   const waveActionRef = useRef<THREE.AnimationAction | null>(null);
 
@@ -77,7 +87,14 @@ const SceneContent = ({ scene, animations }: SceneContentProps) => {
     }
 
     // waveActionRef.current?.reset().play();
+    // waveActionRef.current!.paused = true; // Pauses it immediately
+    // waveActionRef.current!.time = 0; // Moves it to the first frame
   }, [scene]);
+
+  useEffect(() => {
+    if (scene === undefined || animations === undefined) return;
+    waveActionRef.current?.reset().play();
+  }, [scene, animations, visible]);
 
   useFrame((_, delta) => {
     if (mixerRef.current) {

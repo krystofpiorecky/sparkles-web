@@ -6,7 +6,7 @@ import './hero.css'
 export default function Hero() {
   return (
     <section className="hero">
-      <img src='/text.svg' />
+      <img src='/text.svg' className='text' />
       <div>
         <Planet></Planet>
       </div>
