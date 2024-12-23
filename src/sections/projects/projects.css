@@ -66,3 +66,35 @@
   height: 16px;
   width: 16px;
 }
+
+@media only screen and (max-width: 1024px)
+{
+  .projects .projectCard .info h3 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px)
+{
+  .projects .projectCard {
+    flex-direction: column;
+  }
+
+  .projects .projectCard .image {
+    min-width: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .projects .projectCard .info {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 500px)
+{
+  .projects .projectCard .image {
+    aspect-ratio: 1;
+  }
+}

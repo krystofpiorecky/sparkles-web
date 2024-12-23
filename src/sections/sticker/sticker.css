@@ -90,3 +90,10 @@
   font-size: 18px;
   color: #1cfcff;
 }
+
+@media only screen and (max-width: 1024px)
+{
+  .sticker .info h3 {
+    font-size: 40px;
+  }
+}

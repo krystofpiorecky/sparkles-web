@@ -19,7 +19,7 @@ export default function Projects() {
           <Card
             name="YT-Encrypt"
             link='https://chromewebstore.google.com/detail/yt-encrypt/pcihlmcbnllaghbgjddinocpdcpfecbm'
-            linkText='chromewebstore.google.com'
+            linkText='Add-on'
             description='YT-Encrypt offers you a privacy option to directly encrypt your Steam-Tradelink in the Youtube™ comment section, making it only accessible to Sparkles.'
             preview='screenshot-ytencrypt.png'
           />
