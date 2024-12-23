@@ -1,0 +1,91 @@
+.sticker > .container main {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.sticker > .container main::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -20px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 1cfcff */
+.sticker .image {
+  min-width: 350px;
+  height: 350px;
+  background-color: rgba(26, 251, 255, 0.1);
+  border-radius: 30px;
+}
+
+.sticker .image img {
+  width: 100%;
+  pointer-events: none;
+  scale: 1.5;
+}
+
+.sticker .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sticker .info h3 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.sticker .info .steam {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  display: flex;
+  padding: 15px 20px;
+  gap: 20px;
+  align-items: center;
+  border-radius: 100px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.sticker .info .steam svg {
+  height: 16px;
+  width: 16px;
+}
+
+.sticker .price {
+  display: flex;
+  margin-top: auto;
+  gap: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sticker .price .value {
+  height: 52px;
+  color: #1cfcff;
+  background-color: rgba(28, 251, 255, 0.1);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 100px;
+}
+
+.sticker .price .skinsearch {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sticker .price .skinsearch div {
+  font-size: 18px;
+  color: #1cfcff;
+}
