@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Reem+Kufi:wght@700&display=swap');
 
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  background-color: white;
+}
+
 a {
   text-decoration: none;
 }
